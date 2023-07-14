@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/stil.css" rel="stylesheet" />
+</head>
+<body  >
+    <div class="container-fluid" >
+       
+        <div class="wrapper" style="background-color:white">
+            <div class="logo">
+                <img src="~/images/logo.jpg" />
+            </div>
+            <div class="text-center mt-4 name">
+                MAPEG Envanter Sistemi
+            </div>
+            <form class="p-3 mt-3" method="post" action="/account/loginkontrol">
+                <div class="form-field d-flex align-items-center">
+                    <span class="fa fa-user" aria-hidden="true"></span>
+                    <input type="text" maxlength="11" minlength="11" name="IDNum" id="IDNum" placeholder="T.C. NO">
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="fas fa-key"></span>
+                    <input type="password" maxlength="16" name="password" id="password" minlenght="8" placeholder="Şifre">
+                    <span id="passwordError" class="error">8-16 karakter</span>
+                </div>
+                <button class="btn mt-3">  Giriş </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>
